@@ -1,4 +1,4 @@
-# Use Eclipse Temurin 22 as the base image
+# Build stage
 FROM eclipse-temurin:22-jdk AS build
 WORKDIR /app
 
@@ -13,7 +13,7 @@ COPY src ./src
 RUN mvn clean package -DskipTests
 
 # Run stage
-FROM eclipse-temurin:22-jre-slim
+FROM eclipse-temurin:22-jre
 WORKDIR /app
 
 # Copy the built application from the build stage
