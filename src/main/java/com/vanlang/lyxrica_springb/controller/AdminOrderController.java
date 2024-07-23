@@ -17,7 +17,7 @@ public class AdminOrderController {
     @Autowired
     private OrderService orderService;
 
-    @GetMapping("/")
+    @GetMapping("")
     public ResponseEntity<List<Order>> getAllOrderHandler() throws OrderException {
         List<Order> orders = orderService.getAllOrders();
         return new ResponseEntity<List<Order>>(orders, HttpStatus.ACCEPTED);
@@ -29,7 +29,7 @@ public class AdminOrderController {
         return new ResponseEntity<>(order, HttpStatus.OK);
     }
 
-    @PutMapping("/{orderId}/Ship")
+    @PutMapping("/{orderId}/ship")
     public ResponseEntity<Order> ShippedOrderHandler(@PathVariable Long orderId, @RequestHeader("Authorization") String jwt) throws OrderException {
         Order order = orderService.shippedOrder(orderId);
         return new ResponseEntity<>(order, HttpStatus.OK);

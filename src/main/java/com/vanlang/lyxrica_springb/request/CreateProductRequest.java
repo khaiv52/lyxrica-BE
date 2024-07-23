@@ -8,9 +8,9 @@ import java.util.Set;
 public class CreateProductRequest {
     private String title;
     private String description;
-    private int price;
+    private double price;
 
-    private int discountedPrice;
+    private double discountedPrice;
 
     private int discountPercent;
 
@@ -44,15 +44,15 @@ public class CreateProductRequest {
         this.description = description;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
-    public int getDiscountedPrice() {
+    public double getDiscountedPrice() {
         return discountedPrice;
     }
 
