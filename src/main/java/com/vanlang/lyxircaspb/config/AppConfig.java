@@ -49,8 +49,7 @@ public class AppConfig {
         cfg.setAllowedOrigins(List.of(
                 "http://localhost:3000",
                 "http://localhost:4200",
-                "https://lyxirca-shop.vercel.app",
-                "https://lyxrica-be.onrender.com"
+                "https://lyxirca-shop.vercel.app"
         ));
         cfg.setAllowedHeaders(List.of("Authorization", "Content-Type", "X-Requested-With"));
         cfg.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
