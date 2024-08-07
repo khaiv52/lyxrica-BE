@@ -60,6 +60,11 @@ public class AppConfig {
 
         return source;
     }
+
+    @Bean
+    public BCryptPasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
 }
 
 
