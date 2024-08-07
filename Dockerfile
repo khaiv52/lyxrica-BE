@@ -17,7 +17,7 @@ FROM eclipse-temurin:22-jre
 WORKDIR /app
 
 # Copy the built application from the build stage
-COPY --from=build /app/target/lyxircaspb-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=build /app/target/LyxircaSpB-0.0.1-SNAPSHOT.jar app.jar
 
 # Expose the application port
 EXPOSE 5454
