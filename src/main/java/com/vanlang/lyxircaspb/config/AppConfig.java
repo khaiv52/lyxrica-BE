@@ -47,8 +47,8 @@ public class AppConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration cfg = new CorsConfiguration();
         cfg.setAllowedOrigins(List.of(
+                "http://localhost:5454",
                 "http://localhost:3000",
-                "http://localhost:4200",
                 "https://lyxirca-shop.vercel.app",
                 "https://lyxrica-be.onrender.com"
         ));
